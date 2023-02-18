@@ -1,0 +1,43 @@
+{% extends 'base3.html' %}
+{% block title %} Edit {% endblock %}
+{% block content %}
+ <h1 class="m-5 " style="color:#08083e"> Update Comment!</h1>
+ <div class="card-body p-4">
+    <div class="d-flex flex-start w-100">
+      <img class="rounded-circle shadow-1-strong me-3"
+        src="{{url_for('static',filename='feed.jpg')}}" alt="avatar" width="65"
+        height="65" />
+      <div class="w-100">
+       
+        <form method="post" enctype="multipart/form-data">
+
+        <!-- <div>
+        <label for="title" class="form-label">First name </label>
+        <input type="text" value="{{post[1]}}" name="FirstName" class="form-control" >
+        <br>
+
+      </div>
+      
+      <div>
+        <label for="title" class="form-label">Last name </label>
+        <input type="text" value="{{post[2]}}" name="LastName" class="form-control" >
+        <br>
+        
+      </div>-->
+        
+ 
+       <div class="form-outline">
+        <textarea class="form-control" rows= "4" id="textAreaExample"  name="Review"  ></textarea>
+      </div>
+
+        <div class="d-flex justify-content-between mt-3">
+          
+          <button type="submit"  class="btn btn-success" style="width:100px;background-color:#328e89  ;">Edit<i class="fas fa-long-arrow-alt-right ms-1"></i>
+          </button>
+      </form>
+        </div>
+
+      </div>
+    </div>
+
+{% endblock %}

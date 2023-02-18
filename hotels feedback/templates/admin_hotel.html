@@ -1,0 +1,53 @@
+
+{% extends 'base_login.html' %}
+{% block title %} Hotels {% endblock %}
+
+{% block content %}
+
+<style>
+.container {
+  position: relative;
+ 
+}
+.card-img-top{
+  max-width: 400px;
+  max-height: 150px;
+}
+
+.image{
+  width: 400px;
+  height: 400px;
+    }
+</style>
+
+<div class="container">
+  <h2 class="m-5">Hotels</h2>
+  <hr>
+</div>
+<div class="container me-2">
+  <div class="row  mt-5 mb-5 pt-5 pb-5">
+{% for r in rows %}
+    <div class="col-md-4">
+      <div class="card shadow p-3 mb-5 bg-body rounded" style="width: 18rem;">
+        <img src="{{url_for('static', filename='uploads/'+r[3])}}" class="card-img-top" alt="mac">
+        <div class="card-body">
+          <h5 class="card-title" style="color:#08083e " >{{r[1]}}</h5>
+          <p class="card-text">{{r[2]}}</p>
+          <div class=" text-center">
+            <a href="{{url_for('feedback_admin',id=r[0])}}" style="background-color: #1a716c;" class="btn main-btn m-1 btn-lg ">show feedbacks</a>
+          <div class="text-center">
+          <a href="{{ url_for('deletehot', id=r[0]) }}" type="button" class="btn btn-danger btn-sm">Delete</a>
+          <a  href="{{ url_for('update_hot', id=r['HotelID']) }}" type="button" class="btn btn-secondary btn-sm">Edit </a>
+        </div>
+        </div>
+        </div>
+      </div>
+    </div>
+{% endfor %}
+  </div>
+</div>
+
+    
+
+
+{% endblock %}

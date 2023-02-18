@@ -1,0 +1,27 @@
+{% extends 'base3.html' %}
+{% block title %} contact us {% endblock %}
+{% block content %}
+<div class="container">
+    <div class= " fw-bold main-title fl-4 mb-5 pt-5 pb-5">
+      <h2 class=" text-center" style="color:#08083e;">Contact <span style="color: #f7ccb3;">Us</span></h2>
+
+      <div class="row">
+        <div class="col-md-6">
+          <img src="../static/1675191622489.jpg" class="shadow w-75 m-5 " >
+        </div>
+        <div class="col-md-6 mt-3">
+          <form method="post" enctype="multipart/form-data" action="{{url_for('message')}}">
+            <div class="form-group mt-5 p-3">
+              <p style="color:#08083e;">you can share us your opinions here</p>
+              <input type="text" class="mb-3 form-control" name="messName" placeholder="Enter your name">
+              <input type="email" class="mb-3 form-control" name="messEmail" placeholder="Enter email">
+              <input type="text" class=" mb-3 form-control" name="messPhone" placeholder="Enter phone number">
+              <textarea class=" mb-3 form-control" type="text" name="message" rows="5"placeholder=" your messege here please..."></textarea>
+              <button type="submit" class="btn btn-primary  main-btn pl-5 pr-5 btn-lg mt-3 text-center align-items-center w-50 ">send message <i class="fas fa-long-arrow-alt-right ms-1"></i></button>
+            </div>
+          </form>
+          
+        </div>
+      </div>
+    </div>
+{% endblock %}

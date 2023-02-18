@@ -1,0 +1,95 @@
+{% extends 'base_login.html' %}
+{% block title %} Dashboard {% endblock %}
+{% block content %}
+<style>
+    .container {
+      position: relative;
+     
+    }
+    .card-img-top{
+      max-width: 400px;
+      max-height: 150px;
+    }
+    
+    .image{
+      width: 400px;
+      height: 400px;
+        }
+    </style>
+    
+    <div class="container">
+      <div class="main-title  text-center mt-5  pt-5 pb-5">
+        <h2 style="color: #1a716c;">Welcome Back!</h2>
+        <hr>
+        <p style="color:#08083e"> Manage your website and Check the recent developments!<br>
+           Through this page, you can manage all the contents of your site, get acquainted with the latest developments,
+            and know what users say about hotels and opinions that have reached you through "contact us", 
+            as it provides you with all the information you need to know about the site to manage your
+             site easier and better and So that you can provide the best efficiency... </p>
+      </div>
+    </div>
+    <!--///////////////////////////////////////////////////////////////-->
+
+
+  <!--///////////////////////////////////////////////////////////////-->
+  <h3 class="text-center shadow p-3" style="color: #1a716c;">services</h3>
+    <div class="container">
+      <div class="row  mb-5 pt-5 pb-5">
+        <div class="col-md-3">
+          <div class="card shadow p-3 mb-5 bg-body rounded" style="width: 18rem;">
+            <img src="../static/last.jpg" class="card-img-top" alt="mac">
+            <div class="card-body">
+              <h5 class="card-title" style="color:#08083e " >HOME page</h5>
+              <hr>
+              <p class="card-text">see how your home bage looks like so you can decide what to change in your home bage </p>
+              <a href="{{url_for('home_page')}}" class="btn main-btn">Go to HOME</a>
+            </div>
+          </div>
+        </div>
+        <!--/////////////////////////////////////////////////////////////////////////-->
+        <div class="col-md-3">
+            <div class="card shadow p-3 mb-5 bg-body rounded" style="width: 18rem;">
+              <img src="../static/mess.jpg" class="card-img-top " alt="mac">
+              <div class="card-body">
+                <h5 class="card-title" style="color:#08083e " >Users MESSAGES</h5>
+                <hr>
+                <p class="card-text">check the messages you got from the users and find out their opinions about your website</p>
+                <a  href="{{url_for('get_mess')}}" class="btn main-btn">Go to MESSAGES</a>
+              </div>
+            </div>
+        </div>
+        <!--/////////////////////////////////////////////////////////////////////////-->
+
+            <!--/////////////////////////////////////////////////////////////////////////-->
+            <div class="col-md-3">
+                <div class="card shadow p-3 mb-5 bg-body rounded" style="width: 18rem;">
+                  <img src="../static/1675812266704.jpg" class="card-img-top " alt="mac">
+                  <div class="card-body">
+                    <h5 class="card-title" style="color:#08083e " >Hotels</h5>
+                    <hr>
+                    <p class="card-text">review lastest feedbacks added to hotels , manage your hotels and delete unwanted commentes. </p>
+                    <a href="{{url_for('hot_admin')}}" class="btn main-btn">Go to HOTELS</a>
+                  </div>
+                </div>
+            </div>
+            <!--/////////////////////////////////////////////////////////////////////////-->
+
+               <!--/////////////////////////////////////////////////////////////////////////-->
+               <div class="col-md-3">
+                <div class="card shadow p-3 mb-5 bg-body rounded" style="width: 18rem;">
+                  <img src="../static/1676142045703.jpg" class="card-img-top " alt="mac">
+                  <div class="card-body">
+                    <h5 class="card-title" style="color:#08083e " >Users</h5>
+                    <hr>
+                    <p class="card-text">Know who has joined us in the website lately , find out the progress in your site and know more. </p>
+                    <a href="{{url_for('get_user')}}" class="btn main-btn">Go to USERS</a>
+                  </div>
+                </div>
+            </div>
+            <!--/////////////////////////////////////////////////////////////////////////-->
+            
+      </div>
+    </div>
+    
+        
+{% endblock %}

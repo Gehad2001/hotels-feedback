@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri&family=Lalezar&family=Roboto:wght@100;300;500&family=Tajawal&display=swap');
+:root{
+    --dark-color: #1a716c;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    color: #12524f;
+    font-size:large ;
+    font-weight: 400,bold;
+}
+.main-btn{
+    background-color: #08083e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+}
+.main-btn:hover{
+    background-color: #d9b39d;
+}
+.logo{
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    color: 	#1a716c;
+    padding-top: 0px ;
+    padding-bottom: 0px;
+    padding-left: 9px;
+    padding-right: 8px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    border-radius: 20%;
+    font-size: 2rem;
+    margin-right: 4px;
+}
+.navbar{
+ 
+  background-color: #d9b39d;
+  
+}
+
+.navbar .navbar-nav .nav-link{
+    color: #1a716c;
+    font-size: 1.2em;
+    font-weight: 500;
+  
+}
+.navbar .navbar-brand{
+    color: white;
+    font-family:'Aboreto', cursive;
+    font-weight: 600;
+    font-size: 2em;
+}
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover {
+    color:#08083e;
+ 
+}
+.landing{
+    background-image :url("../static/h.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat:no-repeat ;
+    min-height: calc(100vh);
+    background-attachment: fixed;
+    color: #1a716c;
+    opacity: 0.9;
+   
+
+}
+.about .icon-holder{
+    height: 100px;
+}
+.about .icon-holder svg{
+    left: 50%;
+    transform: translateX(-50%);
+}
+.about .icon-holder .number{
+    font-size: 5rem;
+    color: #08083e;
+    
+}
+.about .mabout h4{
+    color:	#1a716c;
+}
+footer{
+    background-color: #d9b39d;
+    width: 100%;
+    bottom: 0;
+    position:fixed;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    display: block;
+}
+.RATE{
+    font-family:'Aboreto', cursive;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+}
+

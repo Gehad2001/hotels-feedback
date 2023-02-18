@@ -1,0 +1,57 @@
+
+{% extends 'base3.html' %}
+{% block title %} Hotels {% endblock %}
+
+{% block content %}
+
+<style>
+.container {
+  position: relative;
+ 
+}
+.card-img-top{
+  max-width: 400px;
+  max-height: 150px;
+}
+
+.image{
+  width: 400px;
+  height: 400px;
+    }
+</style>
+
+<div class="container">
+  <div class="main-title pt-5 pb-5">
+    <h2 >RATE YOUR Hotel NOW!</h2>
+    <p style="color:#08083e">Check the available Hotels and <span>RATE</span> them Don't forget to add your feedback too!<br> you can also check other people feedbacks to get a good idea about Hotels and choose your favorite </p>
+    <HR>
+    <div class="">
+      <p>Find out people's opinions about famous hotels and what they say about them recently <br>so that you can get the best decision about staying in the right hotel for you
+        <br> and enjoy your summer vacation and add your own opinion on the hotels you visited recently.... <br>
+        Here you find the most famous hotels and you know what they say others about it!</p>
+    </div>
+  </div>
+</div>
+<h3 class="text-center shadow p-3" style="color: #1a716c;">Hotels</h3>
+<div class="container me-2">
+  <div class="row mb-5 pt-5 pb-5">
+{% for r in rows %}
+    <div class="col-md-4">
+      <div class="card shadow p-3 mb-5 bg-body rounded" style="width: 18rem;">
+        <img src="{{url_for('static', filename='uploads/'+r[3])}}" class="card-img-top" alt="mac">
+        <div class="card-body">
+          <h5 class="card-title" style="color:#08083e " >{{r[1]}}</h5>
+          <p class="card-text">{{r[2]}}</p>
+
+          <a href="{{url_for('feedback',id=r[0])}}" class="btn main-btn">RATE NOW!</a>
+        </div>
+      </div>
+    </div>
+{% endfor %}
+  </div>
+</div>
+
+    
+
+
+{% endblock %}

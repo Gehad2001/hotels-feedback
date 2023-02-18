@@ -1,0 +1,33 @@
+{% extends 'base_login.html' %}
+{% block title %} Messages {% endblock %}
+
+{% block content %}
+<div class="container m-5">
+<h2 class="m-5">Users Mesaages</h2>
+<hr>
+{% for i in row %}
+
+  <ul class="list-group w-50 m-5">
+
+    <li class="list-group-item  "> 
+        <div class="row">
+        <div class="nav-link active col-md-10" style="color:#1a716c"> Message {{i[0]}}
+        </div>
+        <div class=" col-md-2">
+        <a type="button" href="{{ url_for('delete_mess', id=i[0]) }}" class="btn btn-danger">Delete</a>
+        </div>
+    </div>
+    </li>
+    <li class="list-group-item ">
+        <label style="color: #777779c9;" class=" small p-1 disabled fs-5">name: </label>{{i[1]}}</li>
+    <li class="list-group-item">
+        <label style="color: #818183c9;" class=" p-1 disabled fs-5">mesaage: </label>{{i[4]}}</li>
+    <li class="list-group-item">
+        <label style="color: #7d7d7ec9;" class=" p-1 disabled fs-5">email: </label>{{i[2]}}</li>
+    <li class="list-group-item">
+        <label style="color: #848485c9;" class=" p-1 disabled fs-5">phone number: </label>{{i[3]}}</li>
+  </ul>
+
+{% endfor %}
+</div>
+{% endblock %}
